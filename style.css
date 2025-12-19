@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+
+    text-decoration: none;
+    list-style: none;
+
+    border: none;
+    outline: none;
+
+    position: relative;
+    scrollbar-width: none;
+}
+body{
+    max-width: 100svw;
+    min-height: 100svh;
+    font-family: "Tektur", sans-serif;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: darkblue;
+    color: white;
+}
+input{
+    padding: 10px;
+    border-radius: 10px;
+    width: 200px;
+    background-color: lightgray;
+    font-family: "Tektur", sans-serif;
+}
+.filter{
+    background-color: gray;
+    padding: 10px;
+    padding-top:30px ;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.filter span{
+    padding: 10px 20px;
+    background-color: darkblue;
+    color: white;
+    box-shadow: 0 0 10px white;
+    border-radius: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.filter span:hover{
+    background-color: white;
+    color: darkblue;
+}
+main{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,350px));
+    gap:20px;
+    background-color: gray;
+    justify-content: center;
+}
+.card{
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+    background-color: white;
+    transition: 0.5s;
+    justify-content: space-between;
+}
+.description{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.card button{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: darkblue;
+    color: white;
+    transition: 0.5s;
+    font-family: "Tektur", sans-serif;
+    cursor: pointer;
+}
+.old-price{
+    background-color: rgba(0, 0, 139, 0.31);
+    padding: 10px;
+    border-radius: 10px;
+}
+.card:hover{
+    box-shadow: 0 0 20px white;
+    transform: scale(1.02);
+}
+.card button:hover{
+    background-color: gray;
+    box-shadow: 0 0 10px gray;
+    transform: scale(1.005);
+}
+@media (max-width:768px){
+    .filter span{
+        font-size: 10px;
+        padding: 5px 8px;
+    }
+}
+@media (max-width:425px){
+    header{
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+    }
+    header input{
+        width: 100%;
+    }
+    .filter{
+        display: none;
+    }
+}
